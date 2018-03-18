@@ -11,7 +11,7 @@ pool=Pool(3)
 
 for i in range(10):
 	print("----%d----"%i)
-	pool.apply_async(worker,(i,))
+	pool.apply(worker,(i,))
 pool.close()
 pool.join()
 
